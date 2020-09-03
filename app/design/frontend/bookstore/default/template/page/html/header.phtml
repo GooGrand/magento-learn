@@ -1,0 +1,67 @@
+<!-- Topbar-->
+<div id="topbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+            <?php echo $this->getChildHtml('topbar_cmslinks');?>
+            </div>
+            <div class="user-links col-md-4">
+                <span class="welcome float-left">
+                    <?php echo $this->getLayout () ->getBlock('header') ->getWelcome(); ?>
+                </span>
+                <ul class="list-inline float-left">
+                    <?php if ($this->helper('customer')->isLoggedIn()): ?>
+                    <li class="list-inline-item">
+                        <a title="<?php echo $this->__('My Account') ?>" 
+                            href="<?php echo $this->getUrl('customer/account') ?>">
+                                <?php echo $this->__('My Account') ?>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a title="Log Out" 
+                            href="<?php echo $this->getUrl('customer/account/logout') ?>">
+                                <?php echo $this->__('Logout') ?>
+                        </a>
+                    </li>
+                    <?php else: ?>
+                    <li class="list-inline-item">
+                        <a href="<?php echo $this->getUrl('customer/account/login/') ?>">
+                            <?php echo $this->__('Login') ?>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="<?php echo $this->getUrl('customer/account/create/') ?>">
+                            <?php echo $this->__('Create Account') ?>
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+
+<div id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+                    <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>"/>
+                </a>
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <?php echo $this->getChildHtml('top_cart') ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation-->
+
+<nav>
+
+</nav>

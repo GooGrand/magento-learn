@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <IGN_Catalog>
+            <version>1.0.0</version>
+        </IGN_Catalog>
+    </modules>
+    <global>
+        <blocks>
+            <ign_catalog>
+                <class>IGN_Catalog_Block</class>
+            </ign_catalog>
+<!--            <catalog_category_view>-->
+<!--                <rewrite>-->
+<!--                    <class>IGN_Catalog_Block_Featured</class>-->
+<!--                </rewrite>-->
+<!--            </catalog_category_view>-->
+        </blocks>
+    </global>
+    <frontend>
+    </frontend>
+</config>

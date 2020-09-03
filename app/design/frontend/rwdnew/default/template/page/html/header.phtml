@@ -1,0 +1,170 @@
+<!-- Topbar-->
+<div id="topbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="header-language-container list-inline">
+                    <div class="currency_switcher list-inline-item">
+                         <?php echo $this->getChildHtml('currency_switcher') ?>
+                    </div>
+                    <div class="store-language-container list-inline-item">
+                            <?php echo $this->getChildHtml('store_language') ?>
+                    </div>
+                </div>
+            </div>
+            <div class="top-menu col-6">
+                <span class="welcome float-left">
+                    <?php echo $this->getLayout () ->getBlock('header') ->getWelcome(); ?>
+                </span>
+                <div class="top_links">Links</div>
+                    <ul class="user-links">
+                        <li class="topmenu_item">
+                            <a title="<?php echo $this->__('My Account') ?>"
+                                href="<?php echo $this->getUrl('customer/account') ?>">
+                                <?php echo $this->__('My Account') ?>
+                          </a>
+                        </li>
+                        <li class="topmenu_item">
+                             <a title="<?php echo $this->__('Daily Deal') ?>"
+                                 href="<?php echo $this->getUrl('dailydeal') ?>">
+                                <?php echo $this->__('Daily Deal') ?>
+                            </a>
+                        </li>
+                    <li class="topmenu_item">
+                        <a title="<?php echo $this->__('My Wishlist') ?>"
+                            href="<?php echo $this->getUrl('customer/account/wishlist') ?>">
+                                <?php echo $this->__('My Wishlist') ?>
+                        </a>
+                    </li>
+                    <li class="topmenu_item">
+                        <a title="<?php echo $this->__('Blog') ?>"
+                            href="<?php echo $this->getUrl('blog') ?>">
+                                <?php echo $this->__('Blog') ?>
+                        </a>
+                    </li>
+                    <?php if ($this->helper('customer')->isLoggedIn()): ?>
+
+                    <li class="topmenu_item">
+                        <a title="Log Out" 
+                            href="<?php echo $this->getUrl('customer/account/logout') ?>">
+                                <?php echo $this->__('Logout') ?>
+                        </a>
+                    </li>
+                    <?php else: ?>
+                    <li class="topmenu_item">
+                        <a href="<?php echo $this->getUrl('customer/account/login/') ?>">
+                            <?php echo $this->__('Login') ?>
+                        </a>
+                    </li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+
+<div id="header">
+    <div class="container">
+        <div class="header__row">
+            <div class="logo">
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+                    <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" height="48" width="95"/>
+                </a>
+            </div>
+            <div class="cart-area">
+                <a href="javascript:void(0)" class="mybag-link">
+                    <span class="minicart-label">Cart</span>
+                    <i class="icon-mini-cart"></i>
+                    <span class="cart-info">
+                        <span class="cart-qty">0</span>
+                        <span>Item(s)</span>
+                    </span>
+                </a>
+                <div class="topCartContent">
+                    <div class="inner-wrapper">
+
+                    </div>
+                </div>
+            </div>
+            <div class="search-area">
+                <a href="javascript:void(0)" class="search-icon">
+                    <i class="icon-search"></i>
+                </a>
+                <form id="search_mini_form" action="http://myproj.ee:81/catalogsearch/result/" method="get">
+                    <div class="form-search">
+                        <label for="search">Search:</label>
+                        <input id="search" type="text" autocomplete="off">
+                        <button type="submit" title="search" class="button">
+                            <i class="icon-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="menu-icon">
+                <a href="javascript:void(0)">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+            <div class="menu__row">
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                    <div class="search">
+                        <a href=""><svg width="18px" height="18px" viewBox="0 0 16 16" class="bi bi-search" fill="black" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <nav class="header__menu">
+                        <ul class="header__list">
+                            <li class="home">
+                            <a href="<?php echo $this->getUrl('') ?>" class="header__link">Home</a>
+                            </li>
+                            <li class="categories">
+                                <a href="<?php echo $this->getUrl('') ?>" class="header__link ">Categories</a>
+                                <ul class="submenu">
+                                    <li class="men">
+                                    <a href="#"> Men </a>
+                                    </li>
+                                    <li class="women">
+                                     <a href="#"> Women </a>
+                                    </li>
+                                    <li class="accessories">
+                                     <a href="#"> Accessories </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="products">
+                                <a href="<?php echo $this->getUrl('') ?>" class="header__link">Products</a>
+                                <ul class="submenu">
+                                </ul>
+                            </li>
+                    <li class="menu-pages">
+                    <a href="<?php echo $this->getUrl('') ?>" class="header__link">Pages</a>
+                        <ul class="submenu">
+                        </ul>
+                    </li>
+                    <li class="features">
+                    <a href="<?php echo $this->getUrl('') ?>" class="header__link">Features</a>
+                        <ul class="submenu">
+                        </ul>
+                    </li>
+                </ul>
+                </nav>
+            </div>
+            <div class="">
+                <?php echo $this->getChildHtml('top_cart') ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation-->
+
+<nav>
+
+</nav>
+

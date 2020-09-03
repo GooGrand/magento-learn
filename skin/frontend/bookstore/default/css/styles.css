@@ -1,0 +1,52 @@
+#topbar {
+	 background: none repeat scroll 0 0 #000000;
+	 color: #FFFFFF;
+	 font-size: 12px;
+	 padding: 10px 0 0;
+	 border-bottom: 3px solid #FA9221;
+}
+ #topbar ul {
+	 margin: 5px 0 0;
+}
+ #topbar a {
+	 color: #9f9f9f;
+}
+ #topbar a:hover {
+	 color: #f89223;
+}
+ #topbar .user-links .welcome {
+	 padding: 10px;
+}
+ #topbar .user-links ul {
+	 background: none repeat scroll 0 0 #fa9221;
+	 margin: 0;
+	 padding: 10px;
+}
+ #topbar .user-links a {
+	 color: #fff;
+}
+
+ /* Header */
+#header {
+padding-top:10px;
+}
+#header .logo {
+display:block;
+margin-bottom:20px;
+}
+#header .block-topcart {
+margin-top: 5px;
+padding: 14px 20px 10px;
+}
+#header .block-topcart .block-title {
+font-size: 15px;
+margin-bottom: 5px
+}
+#header .block-topcart p.empty {
+font-size: 12px;
+color: #666;
+font-style: italic
+}
+#header .block-topcart .block-content {
+display: none
+}
