@@ -1,9 +1,0 @@
-a:5:{i:0;s:127:"Cannot send headers; headers already sent in C:\OpenServer\domains\myproj.ee\www\app\code\core\Mage\Core\functions.php, line 32";i:1;s:996:"#0 C:\OpenServer\domains\myproj.ee\www\lib\Zend\Controller\Response\Abstract.php(115): Zend_Controller_Response_Abstract->canSendHeaders()
-#1 C:\OpenServer\domains\myproj.ee\www\app\code\core\Mage\Core\Model\App.php(1281): Zend_Controller_Response_Abstract->setHeader()
-#2 C:\OpenServer\domains\myproj.ee\www\app\code\core\Mage\Core\Controller\Varien\Front.php(80): Mage_Core_Model_App->getResponse()
-#3 C:\OpenServer\domains\myproj.ee\www\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(202): Mage_Core_Controller_Varien_Front->getResponse()
-#4 C:\OpenServer\domains\myproj.ee\www\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match()
-#5 C:\OpenServer\domains\myproj.ee\www\app\code\core\Mage\Core\Model\App.php(381): Mage_Core_Controller_Varien_Front->dispatch()
-#6 C:\OpenServer\domains\myproj.ee\www\app\Mage.php(686): Mage_Core_Model_App->run()
-#7 C:\OpenServer\domains\myproj.ee\www\index.php(83): Mage::run()
-#8 {main}";s:3:"url";s:15:"/checkout/cart/";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}
