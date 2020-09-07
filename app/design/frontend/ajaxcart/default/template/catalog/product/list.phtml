@@ -187,7 +187,6 @@
                             <?php
                         //each iteration we will get new product attributes and new renderer
                             $_attributes = Mage::helper('core')->decorateArray($this->getAllowAttributes($_product->getId())); // overwritten method to get attributes from DB
-                            $_renderers = $this->getChild('attr_renderers')->getSortedChildren(); //Rederer for attributes
                             ?>
 
 
@@ -224,7 +223,6 @@
 
                                                 $_attr = $_attribute->getProductAttribute();
                                                 $_attrCode = $_attr->getAttributeCode();
-                                                Mage::log($_attrCode);
                                                 $_id = $_attribute->getAttributeId();
                                                 ?>
                                             <dt class="swatch-attr">
@@ -245,8 +243,10 @@
                                                             $_swatchUrl = Mage::helper('configurableswatches/productimg')->getSwatchUrl($_product, $_optionLabel, $_swatchInnerWidth, $_swatchInnerHeight, $_swatchType);
                                                             //Mage::log('value '.$_optionValue);
                                                             //Mage::log('label '.$_optionLabel);
-                                                            //Mage::log($_attrValues);
-                                                            Mage::log($_product->getAttributeText($_attrCode));
+                                                            //Mage::log(get_class_methods($_attribute));
+                                                            Mage::log($_attributes->getData());
+                                                            //Mage::log($_attrCode);
+                                                            //Mage::log($_attribute->getFrontendLabel());
                                                             $_hasImage = !empty($_swatchUrl);
                                                             $_liClass = '';
                                                             $_aClass = 'swatch-link swatch-link-' . $_attribute->getAttributeId();
@@ -368,7 +368,6 @@
             }.bind(productAddToCartForm);
         </script>
         <!--        END of Add to cart form submission-->
-
 
         <!--        CODE for modal popup-->
         <script>
